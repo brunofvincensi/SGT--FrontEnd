@@ -3,7 +3,7 @@ import { HomeComponent } from './navegacao/home/home.component';
 import { TurmasComponent } from './turmas/turmas.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { AlunosComponent } from './alunos/alunos.component';
-import { ProfessoresComponent } from './professores/professores.component';
+import { ProfessorComponent } from './professor/professor.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
@@ -14,7 +14,7 @@ export const rootRouterConfig: Routes = [
     { path: 'turmas', component: TurmasComponent },
     { path: 'cursos', component: CursosComponent },
     { path: 'alunos', component: AlunosComponent },
-    { path: 'professores', component: ProfessoresComponent },
+    { path: 'professor', component: ProfessorComponent },
     { path: 'clientes', component: ClientesComponent },
     { path: 'feature-data-binding', component: DataBindingComponent },
     { path: 'produtos', component: ListaProdutoComponent },
