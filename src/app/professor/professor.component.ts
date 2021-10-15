@@ -12,9 +12,16 @@ export class ProfessorComponent implements OnInit {
 
   professor: Professor = new Professor();
 
+  listaProfessor: Professor[] | undefined;
+
   constructor(private router: Router, private service: ServiceService) { }
 
   ngOnInit(): void {
+
+    this.service.getProfessor()
+    .subscribe(data => {
+      this.listaProfessor = data
+    })
   }
 
   addProfessor(){
@@ -23,6 +30,8 @@ export class ProfessorComponent implements OnInit {
       alert('Sucesso');
       this.router.navigate(["professor"]);
     })
+
+
   }
 
 }

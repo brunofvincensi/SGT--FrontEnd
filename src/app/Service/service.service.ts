@@ -15,4 +15,8 @@ export class ServiceService {
 
         return this.http.post<Professor>(this.url, professor)
     }
+
+    getProfessor(){
+        return this.http.get<Professor[]>(this.url);
+    }
 }
