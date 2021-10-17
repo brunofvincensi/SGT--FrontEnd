@@ -20,6 +20,7 @@ import { DataBindingComponent } from './demos/data-binding/data-binding.componen
 import { ProdutoService } from './produtos/produtos.service';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
 import { ServiceService } from './Service/service.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,11 +31,12 @@ import { ServiceService } from './Service/service.service';
     SobreComponent,
     ProfessorComponent,
     DataBindingComponent,
-    ListaProdutoComponent
+    ListaProdutoComponent,
+    ProfessorComponent
   ],
   imports: [
     BrowserModule,
-  
+    AppRoutingModule,
     FormsModule,
     HttpClientModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false})]
