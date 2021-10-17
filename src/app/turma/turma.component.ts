@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Turma } from '../entity/Turma';
+import { TurmaService } from '../Service/turma.service';
 
 @Component({
   selector: 'app-turma',
@@ -7,9 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TurmaComponent implements OnInit {
 
-  constructor() { }
+  turma: Turma = new Turma();
 
-  ngOnInit() {
+
+
+  constructor(private router: Router, private service: TurmaService) { }
+
+
+
+
+  ngOnInit(): void {
+
+  
+  }
+
+  addTurma(){
+   this.service.addTurma(this.turma)
+    .subscribe(data =>{
+      alert('turma adicionada');
+      this.router.navigate(["cliente"]);
+    })
+
+
   }
 
 }

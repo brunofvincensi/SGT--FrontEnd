@@ -24,6 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ClienteComponent } from './cliente/cliente.component';
 import { AlunoComponent } from './aluno/aluno.component';
 import { CursoComponent } from './curso/curso.component';
+import { TurmaComponent } from './turma/turma.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CursoComponent } from './curso/curso.component';
     ProfessorComponent,
     ClienteComponent,
     AlunoComponent,
-    CursoComponent
+    CursoComponent,
+    TurmaComponent
   ],
   imports: [
     BrowserModule,
