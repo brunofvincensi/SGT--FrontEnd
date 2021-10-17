@@ -6,7 +6,7 @@ import { Professor } from "../entity/Professor";
     providedIn: 'root'
 })
 
-export class ServiceService {
+export class ProfessorService {
     constructor(private http: HttpClient) {}
 
     url = "http://localhost:8080/professor";
@@ -19,4 +19,6 @@ export class ServiceService {
     getProfessor(){
         return this.http.get<Professor[]>(this.url);
     }
+
+    
 }

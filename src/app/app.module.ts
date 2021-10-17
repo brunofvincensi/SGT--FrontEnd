@@ -19,8 +19,11 @@ import { rootRouterConfig } from './app.routes';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { ProdutoService } from './produtos/produtos.service';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
-import { ServiceService } from './Service/service.service';
+
 import { AppRoutingModule } from './app-routing.module';
+import { ClienteComponent } from './cliente/cliente.component';
+import { AlunoComponent } from './aluno/aluno.component';
+import { CursoComponent } from './curso/curso.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { AppRoutingModule } from './app-routing.module';
     ProfessorComponent,
     DataBindingComponent,
     ListaProdutoComponent,
-    ProfessorComponent
+    ProfessorComponent,
+    ClienteComponent,
+    AlunoComponent,
+    CursoComponent
   ],
   imports: [
     BrowserModule,

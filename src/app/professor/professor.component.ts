@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Professor } from '../entity/Professor';
-import { ServiceService } from '../Service/service.service';
+import { ProfessorService, } from '../Service/professor.service';
 
 @Component({
   selector: 'app-professor',
@@ -14,7 +14,7 @@ export class ProfessorComponent implements OnInit {
 
   listaProfessor: Professor[] | undefined;
 
-  constructor(private router: Router, private service: ServiceService) { }
+  constructor(private router: Router, private service: ProfessorService) { }
 
   ngOnInit(): void {
 
@@ -27,7 +27,7 @@ export class ProfessorComponent implements OnInit {
   addProfessor(){
     this.service.addProfessor(this.professor)
     .subscribe(data =>{
-      alert('Sucesso');
+      alert('professor adicionado');
       this.router.navigate(["professor"]);
     })
 

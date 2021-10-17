@@ -18,7 +18,7 @@
 
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
-        <h1 class="display-3">Alunos</h1>
+        <h1 class="display-3">Aluno</h1>
         <p class="lead"></p>
     </header>
 
@@ -28,7 +28,7 @@
             <div class="col-md-4 multi-horizontal" data-for="nomeAluno">
                 <div class="form-group">
                     <label class="form-control-label mbr-fonts-style display-7" for="email-form1-2w">Nome</label>
-                    <input type="text" class="form-control" name="nomeAluno" data-form-field="Nome" required=""
+                    <input type="text" class="form-control" [(ngModel)]="aluno.nome" name="nomeAluno" data-form-field="Nome" required=""
                         id="email-form1-2w">
                 </div>
             </div>
@@ -36,7 +36,7 @@
             <div class="col-md-4 multi-horizontal" data-for="cpfAluno">
                 <div class="form-group">
                     <label class="form-control-label mbr-fonts-style display-7" for="email-form1-2w">CPF</label>
-                    <input type="text" class="form-control" name="cpfAluno" data-form-field="CPF" required=""
+                    <input type="text" class="form-control" [(ngModel)]="aluno.cpf" name="cpfAluno" data-form-field="CPF" required=""
                         id="email-form1-2w">
                 </div>
             </div>
@@ -44,29 +44,19 @@
             <div class="col-md-4 multi-horizontal" data-for="cepAluno">
                 <div class="form-group">
                     <label class="form-control-label mbr-fonts-style display-7" for="email-form1-2w">CEP</label>
-                    <input type="text" class="form-control" name="cepAluno" data-form-field="CEP" required=""
+                    <input type="text" class="form-control" [(ngModel)]="aluno.cep" name="cepAluno" data-form-field="CEP" required=""
                         id="email-form1-2w">
                 </div>
             </div>
 
-            <div class="col-md-4 multi-horizontal" data-for="cidadeAluno">
-                <div class="form-group">
-                    <label class="form-control-label mbr-fonts-style display-7" for="phone-form1-2w">Cidade</label>
-                    <input type="text" class="form-control" name="cidadeAluno" data-form-field="cidade" id="phone-form1-2w">
-                </div>
-            </div>
+        
 
-            <div class="col-md-4 multi-horizontal" data-for="dataCadAluno">
-                <div class="form-group">
-                    <label class="form-control-label mbr-fonts-style display-7" for="phone-form1-2w">Data de Cadastro</label>
-                    <input type="date" class="form-control" name="dataCadAluno" data-form-field="cidade" id="phone-form1-2w">
-                </div>
-            </div>
+            
         </div>
         
 
         <span class="input-group-btn">
-            <button href="" type="submit" class="btn btn-primary btn-form display-4">Gravar</button>
+            <button (click)='addAluno()' class="btn btn-primary btn-form display-4">Gravar</button>
         </span>
     </form>
 </div>
