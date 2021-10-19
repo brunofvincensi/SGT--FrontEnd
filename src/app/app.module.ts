@@ -25,6 +25,7 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { AlunoComponent } from './aluno/aluno.component';
 import { CursoComponent } from './curso/curso.component';
 import { TurmaComponent } from './turma/turma.component';
+import { ListarComponent } from './curso/listar/listar.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { TurmaComponent } from './turma/turma.component';
     ClienteComponent,
     AlunoComponent,
     CursoComponent,
-    TurmaComponent
+    TurmaComponent,
+    ListarComponent
   ],
   imports: [
     BrowserModule,

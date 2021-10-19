@@ -33,4 +33,8 @@ export class CursoComponent implements OnInit {
 
   }
 
+  getCurso() {
+    this.router.navigate(["listar"]);
+  }
+
 }
