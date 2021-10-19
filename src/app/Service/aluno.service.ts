@@ -16,6 +16,10 @@ export class AlunoService {
         return this.http.post<Aluno>(this.url, aluno)
     }
 
+    getAluno() {
+        return this.http.get<Aluno[]>(this.url);
+      }
+
     
     
 }

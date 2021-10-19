@@ -9,22 +9,38 @@
 
     <form class="mbr-form">
         <div class="row row-sm-offset">
-            <table>
-                <thead>
-                    <tr>
-                        <td>Id</td>
-                        <td>Nome</td>
-                    </tr>
+            
+            <div class="card">
+                <div class="card-header">
+                    
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                
+                                <td>Nome</td>
+                                <td>CPF(R$)</td>
+                                <td>Capacitação</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let professor of listaProfessor" class="text-center">
+                        
+                                <td>{{ professor.nome }}</td>
+                                <td>{{ professor.cpf }}</td>
+                                <td>{{ professor.capacitacaoProfessor}}</td>
+                                <td>
+                                    <button class="btn btn-warning">Editar</button>
+                                    <button class="btn btn-danger">Excluir</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>    
 
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{{professor.id}}</td>
-                        <td>{{professor.nome}}</td>
-                    </tr>
-                </tbody>
-                
-            </table>
+
         </div>
         <div class="row row-sm-offset">
      
@@ -43,7 +59,7 @@
             </div>
         </div>
         <div class="form-group" data-for="capacitacao">
-            <label class="form-control-label mbr-fonts-style display-7" for="">Capacitação Professor</label>
+            <label class="form-control-label mbr-fonts-style display-7" for="">Capacitação</label>
             <textarea type="text" class="form-control"  [(ngModel)]="professor.capacitacaoProfessor" name="capacitacao" rows="7" data-form-field="Message"
                 id="message-form1-2w"></textarea>
         </div>

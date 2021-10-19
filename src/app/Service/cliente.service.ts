@@ -16,6 +16,10 @@ export class ClienteService {
         return this.http.post<Cliente>(this.url, cliente)
     }
 
+    getCliente() {
+        return this.http.get<Cliente[]>(this.url);
+      }
+
     
     
 }

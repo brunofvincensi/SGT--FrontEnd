@@ -16,6 +16,10 @@ export class TurmaService {
         return this.http.post<Turma>(this.url, turma)
     }
 
+    getTurma() {
+        return this.http.get<Turma[]>(this.url);
+      }
+
     
     
 }

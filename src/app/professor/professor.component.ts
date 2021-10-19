@@ -12,7 +12,7 @@ export class ProfessorComponent implements OnInit {
 
   professor: Professor = new Professor();
 
-  listaProfessor: Professor[] | undefined;
+  listaProfessor: Professor[];
 
   constructor(private router: Router, private service: ProfessorService) { }
 
