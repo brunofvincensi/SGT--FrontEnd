@@ -10,6 +10,8 @@ import { ClienteService } from '../Service/cliente.service';
 })
 export class ClienteComponent implements OnInit {
 
+  listaCliente: Cliente[];
+
   cliente: Cliente = new Cliente();
 
 
@@ -20,6 +22,10 @@ export class ClienteComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.service.getCliente()
+    .subscribe(data => {
+      this.listaCliente = data;
+    })
 
   
   }

@@ -16,6 +16,38 @@
         <p class="lead"></p>
     </header>
 
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                
+                <td>Nome Fantasia</td>
+                <td>Razão Social</td>
+                <td>CNPJ</td>
+                <td>CEP</td>
+                <td>Número</td>
+                <td>Cidade</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of listaCliente" class="text-center">
+        
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.razaoSocial }}</td>
+                <td>{{ cliente.cnpj }}</td>
+                <td>{{ cliente.cep }}</td>
+                <td>{{ cliente.numero }}</td>
+                <td>{{ cliente.cidade }}</td>
+                <td>
+                    <button class="btn btn-warning">Editar</button>
+                    <button class="btn btn-danger">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
     <form class="mbr-form">
         <div class="row row-sm-offset">
      

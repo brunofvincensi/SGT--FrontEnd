@@ -10,6 +10,8 @@ import { TurmaService } from '../Service/turma.service';
 })
 export class TurmaComponent implements OnInit {
 
+  listaTurma: Turma[];
+
   turma: Turma = new Turma();
 
 
@@ -20,6 +22,10 @@ export class TurmaComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.service.getTurma()
+    .subscribe(data => {
+      this.listaTurma = data;
+    })
 
   
   }

@@ -10,6 +10,8 @@ import { AlunoService } from '../Service/aluno.service';
 })
 export class AlunoComponent implements OnInit {
 
+  listaAluno: Aluno[];
+
   aluno: Aluno = new Aluno();
 
 
@@ -20,6 +22,11 @@ export class AlunoComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.service.getAluno()
+    .subscribe(data => {
+      this.listaAluno = data;
+
+    })
 
   
   }
