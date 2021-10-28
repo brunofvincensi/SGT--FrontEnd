@@ -6,11 +6,11 @@ import { TurmaService } from '../Service/turma.service';
 @Component({
   selector: 'app-turma',
   templateUrl: './turma.component.html',
-  styles: []
+  styleUrls: []
 })
 export class TurmaComponent implements OnInit {
 
-  listaTurma: Turma[];
+
 
   turma: Turma = new Turma();
 
@@ -22,22 +22,24 @@ export class TurmaComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.service.getTurma()
-    .subscribe(data => {
-      this.listaTurma = data;
-    })
-
   
+
+
   }
 
   addTurma(){
    this.service.addTurma(this.turma)
     .subscribe(data =>{
       alert('turma adicionada');
-      this.router.navigate(["cliente"]);
+      this.router.navigate(["turma"]);
     })
 
 
+  }
+
+
+  getTurma() {
+    this.router.navigate(["listarTurma"]);
   }
 
 }

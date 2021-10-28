@@ -27,16 +27,28 @@ export class ClienteComponent implements OnInit {
       this.listaCliente = data;
     })
 
-  
+
+    
   }
 
+  
+
+
+
+
   addCliente(){
+
+    if(this.cliente.nome.length < 3){
+
+      alert('nome muito curto')
+
+    } else
    this.service.addCliente(this.cliente)
     .subscribe(data =>{
       alert('cliente adicionado');
       this.router.navigate(["cliente"]);
     })
-
+  
 
   }
 

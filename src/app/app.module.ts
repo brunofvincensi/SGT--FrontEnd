@@ -26,6 +26,7 @@ import { AlunoComponent } from './aluno/aluno.component';
 import { CursoComponent } from './curso/curso.component';
 import { TurmaComponent } from './turma/turma.component';
 import { ListarComponent } from './curso/listar/listar.component';
+import { ListarTurmaComponent } from './turma/listarTurma/listarTurma.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ListarComponent } from './curso/listar/listar.component';
     AlunoComponent,
     CursoComponent,
     TurmaComponent,
-    ListarComponent
+    ListarComponent,
+    ListarTurmaComponent
   ],
   imports: [
     BrowserModule,

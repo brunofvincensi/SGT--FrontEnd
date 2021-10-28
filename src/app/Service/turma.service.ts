@@ -7,6 +7,7 @@ import { Turma } from "../entity/Turma";
 })
 
 export class TurmaService {
+
     constructor(private http: HttpClient) {}
 
     url = "http://localhost:8080/turma";
@@ -20,7 +21,6 @@ export class TurmaService {
         return this.http.get<Turma[]>(this.url);
       }
 
-      
 
     
     

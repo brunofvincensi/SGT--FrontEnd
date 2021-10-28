@@ -15,39 +15,6 @@
     </header>
 
 
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                
-                <td>Horário</td>
-                <td>Período</td>
-                <td>Nome da Turma</td>
-                <td>Quantidade de Alunos</td>
-                <td>Empresa</td>
-                <td>Curso</td>
-                <td>Professor</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let turma of listaTurma" class="text-center">
-        
-                <td>{{ turma.horario }}</td>
-                <td>{{ turma.periodo }}</td>
-                <td>{{ turma.nome }}</td>
-                <td>{{ turma.quantidadeAluno }}</td>
-                <td>{{ turma.nomeCliente }}</td>
-                <td>{{ turma.nomeCurso }}</td>
-                <td>{{ turma.nomeProfessor }}</td>
-                <td>
-                    <button class="btn btn-warning">Editar</button>
-                    <button class="btn btn-danger">Excluir</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-
-
     <form class="mbr-form">
         <div class="row row-sm-offset">
      
@@ -110,6 +77,8 @@
 
         <span class="input-group-btn">
             <button (click)='addTurma()' class="btn btn-primary btn-form display-4">Gravar</button>
+            <br>
+            <button (click)="getTurma()" class="btn btn-info">Listar</button>
         </span>
     </form>
 </div>

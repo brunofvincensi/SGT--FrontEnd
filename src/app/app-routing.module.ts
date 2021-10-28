@@ -6,6 +6,7 @@ import { Cliente } from './entity/Cliente';
 import { Curso } from './entity/Curso';
 import { Professor } from './entity/Professor';
 import { Turma } from './entity/Turma';
+import { ListarTurmaComponent } from './turma/listarTurma/listarTurma.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'adicionar', component: Aluno },
   { path: 'adicionar', component: Curso },
   {path: 'adicionar', component: Turma},
-  {path: 'listar', component: ListarComponent}
+  {path: 'listar', component: ListarComponent},
+  {path: 'listar', component: ListarTurmaComponent}
   
 
 ];

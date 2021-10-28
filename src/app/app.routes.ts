@@ -7,6 +7,7 @@ import { ProfessorComponent } from './professor/professor.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
+import { ListarTurmaComponent } from './turma/listarTurma/listarTurma.component';
 
 export const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},

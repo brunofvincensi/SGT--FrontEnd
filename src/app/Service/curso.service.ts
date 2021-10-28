@@ -19,4 +19,6 @@ export class CursoService {
     getCurso() {
         return this.http.get<Curso[]>(this.url);
       }
+
+    
 }
